@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="icon"
+      href="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
+      type="image/png"
+    />
+    <!--👆👆logo-->
+    <title>Gong_cx's Page</title>
+    <!--👆👆title-->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <!--👆👆老UTF-8了 html4写法-->
+    <meta charset="UTF-8" />
+    <!--👆👆老UTF-8了 html5写法-->
+    <meta name="author" content="2020-2021 © Gong_cx . All rights reserved" />
+    <!--👆👆SEO设置-->
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <!--👆👆移动端适配-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <!--👆👆移动端适配-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MDUI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+      integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+      crossorigin="anonymous"
+    />
+
+    <!-- MDUI JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+      integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/IlysvlVEizbr/Live2D@1.9/kbn.js"
+      defer
+    ></script>
+     <script>
+      // 控制台小彩蛋
+      !(function () {
+        console.log(
+          "%cCopyright:%c GBCLStudio%c转载请注明出处",
+          "color: rgba(255,255,255,.6); background: #2196f3; font-size: 15px;border-radius:5px 0 0 5px;padding:10px 0 10px 20px;",
+          "color: rgba(255,255,255,1); background: #2196f3; font-size: 15px;border-radius:0;padding:10px 15px 10px 0px;",
+          "color: #fff; background: #FF9900; font-size: 15px;border-radius:0 5px 5px 0;padding:10px 20px 10px 15px;"
+        );
+      })();
+      console.log(
+        "%c本站静态资源:%c腾讯云 上海对象存储",
+        "color:#fff; background: #2196f3;font-size: 12px;border-radius:5px 0 0 5px;padding:3px 10px 3px 10px;",
+        "color:#fff; background: #FF9900;font-size: 12px;border-radius:0 5px 5px 0;padding:3px 10px 3px 10px;"
+      );
+      console.log(
+        "%c我的邮箱：aries#gcxstudio.cn（# 改为 @）",
+        "font-size: 12px;border-radius:5px;padding:3px 10px 3px 10px;border:1px solid #FF9900;"
+      );
+    </script>
+    <style>
+      body {
+        height: 100%;
+        background-color: #ffffff;
+        background-image: url("images/overlay.png"),
+          -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
+          url("https://cdn-pic.gcxstudio.cn/2021/08/27/LZBJ.jpg");
+        background-image: url("images/overlay.png"),
+          -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
+          url("https://cdn-pic.gcxstudio.cn/2021/08/27/LZBJ.jpg");
+        background-image: url("images/overlay.png"),
+          -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
+          url("https://cdn-pic.gcxstudio.cn/2021/08/27/LZBJ.jpg");
+        background-image: url("images/overlay.png"),
+          linear-gradient(
+            60deg,
+            rgba(255, 165, 150, 0.5) 5%,
+            rgba(0, 228, 255, 0.35)
+          ),
+          url("https://cdn-pic.gcxstudio.cn/2021/08/27/LZBJ.jpg");
+        background-repeat: repeat, no-repeat, no-repeat;
+        background-size: 100px 100px, cover, cover;
+        background-position: top left, center center, bottom center;
+        background-attachment: fixed, fixed, fixed;
+      }
+
+      #main {
+        height: 500px;
+        width: 500px;
+        padding-top: 68px;
+        padding: 6em 3em 3em 3em;
+        background: #ffffff;
+        border-radius: 4px;
+        cursor: default;
+        max-width: 100%;
+        opacity: 0.95;
+        position: relative;
+        text-align: center;
+        width: 27em;
+      }
+
+      #wrapper {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -moz-justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -moz-perspective: 1000px;
+        -webkit-perspective: 1000px;
+        -ms-perspective: 1000px;
+        perspective: 1000px;
+        position: relative;
+        min-height: 100%;
+        padding: 1.5em;
+        z-index: 2;
+      }
+
+      #main::before {
+        content: "";
+        display: grid;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: url("https://cdn-pic.gcxstudio.cn/2021/08/27/L8dF.png")
+          no-repeat center;
+        width: 100%;
+        height: 300px;
+        opacity: 0.45;
+        transform: translate(0, 105px) scale(0.4, 0.4);
+        z-index: -1;
+      }
+
+      .highlight {
+        margin-top: 1rem;
+      }
+    </style>
+    <!-- require APlayer -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+    />
+    <script
+      src="https://v1.hitokoto.cn/?encode=js&c=a&c=d&c=a&c=l&c=6&c=j&max_length=24&select=%23hitokoto"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <header class="mdui-appbar mdui-appbar-fixed" mdui-headroom>
+      <div class="mdui-toolbar">
+        <a
+          href="/index.html"
+          target="_blank"
+          class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+          mdui-tooltip="{content: '返回首页'}"
+          one-link-mark="yes"
+        >
+          <img
+            src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
+            class="
+              mdui-icon mdui-img-fluid mdui-img-rounded mdui-hidden-lg-down
+            "
+            style="width: 24px; height: 24px"
+          />
+        </a>
+        <span class="mdui-typo-title-opacity">Gong_cx 恐龙酱</span>
+        <div class="mdui-toolbar-spacer"></div>
+        <a
+          href="https://github.com/GBCLStudio/navigation"
+          target="_blank"
+          class="mdui-btn mdui-ripple mdui-ripple-white mdui-hidden-lg-down"
+          mdui-tooltip="{content: '本项目最后一次提交时间'}"
+          one-link-mark="yes"
+        >
+          <img
+            src="https://img.shields.io/github/last-commit/GBCLStudio/navigation?color=orange&label=%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8F%90%E4%BA%A4&style=for-the-badge"
+            class="mdui-img-fluid mdui-img-rounded"
+        /></a>
+        <a
+          href="https://github.com/GBCLStudio/navigation"
+          target="_blank"
+          class="mdui-btn mdui-ripple mdui-ripple-white mdui-hidden-lg-down"
+          mdui-tooltip="{content: '本项目 Star 量'}"
+          one-link-mark="yes"
+        >
+          <img
+            src="https://img.shields.io/github/stars/GBCLStudio/navigation?color=orange&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%20Star%20%E6%95%B0%E9%87%8F&style=for-the-badge"
+            class="mdui-img-fluid mdui-img-rounded mdui-hidden-lg-down"
+        /></a>
+        <a
+          href="https://github.com/gongcxgithub"
+          target="_blank"
+          class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+          mdui-tooltip="{content: '查看 Github'}"
+          one-link-mark="yes"
+        >
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 36 36"
+            enable-background="new 0 0 36 36"
+            xml:space="preserve"
+            class="mdui-icon img-fluid"
+            style="width: 24px; height: 24px"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              fill="#ffffff"
+              d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
+      c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
+      c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
+      c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
+      c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
+      c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <br />
+    <center id="wrapper">
+      <div
+        align="center"
+        class="container bg-light mdui-typo"
+        id="main"
+        style="height: auto"
+      >
+        <img
+          src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
+          alt=""
+          class="rounded mx-auto d-block mdui-img-circle"
+          style="width: 122px; height: 122px"
+        />
+        <br />
+        <div class="mdui-divider"></div>
+        <h2
+          mdui-tooltip="{content: '超级懒的废物一个，每天无所事事', position: 'top',delay: 300}"
+        >
+          Gong_cx
+        </h2>
+        <a
+          href="https://status.gong-cx.top"
+          target="_blank"
+          class="mdui-btn mdui-ripple mdui-ripple-white"
+          mdui-tooltip="{content: '服务器运行状态 ; Server Status'}"
+          one-link-mark="yes"
+        >
+          <img
+            src="https://img.shields.io/uptimerobot/status/m789045589-aa4c724e50481824deb4c00f?color=orange&label=%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81&style=for-the-badge"
+            class="mdui-img-fluid mdui-img-rounded"
+          />
+        </a>
+        <a
+          href="https://status.gong-cx.top"
+          target="_blank"
+          class="mdui-btn mdui-ripple mdui-ripple-white"
+          mdui-tooltip="{content: '网站可用率 ; Server Status'}"
+          one-link-mark="yes"
+        >
+          <img
+            src="https://img.shields.io/uptimerobot/ratio/m789046749-eb9a19ebbd61f55f3816baa2?color=orange&label=%E7%BD%91%E7%AB%99%E5%8F%AF%E7%94%A8%E7%8E%87&style=for-the-badge"
+            class="mdui-img-fluid mdui-img-rounded"
+          />
+        </a>
+        <div class="mdui-chip">
+          <img
+            class="mdui-chip-icon"
+            src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
+          />
+          <span class="mdui-chip-title">外号：恐龙酱，快来陪我 van ♂</span>
+        </div>
+        <blockquote>
+          <p style="text-align: left" id="hitokoto">
+            <a
+              href="javascript:alert('都说了，已经在获取了，哼！');"
+              id="hitokoto_text"
+              >:D 获取中...</a
+            >
+          </p>
+          <footer style="text-align: right">引用自：Hitokoto</footer>
+        </blockquote>
+        <div class="mdui-typo-body1">
+          一个菜逼，每天都不知道在做什么，特长闲来无事隔着学前端，总结：真是个没意思的人
+        </div>
+        <div class="highlight">
+          <span
+            ><img
+              class="mdui-img-rounded img-fluid"
+              src="https://shields.io/badge/推荐内容-快来我的博客康康，这里都是好康的嘿嘿嘿-orange?logo=appveyor&style=for-the-badge"
+          /></span>
+          <a
+            mdui-tooltip="{content: '好康的博客，都是好东西嘿嘿'}"
+            href="//www.gcxstudio.cn/"
+            one-link-mark="yes"
+            >https://www.gcxstudio.cn</a
+          >
+        </div>
+        <br />
+        <div class="mdui-divider"></div>
+        <br />
+        <div class="mdui-typo-headline">
+          战斗力指数
+          <br />
+          <img
+            src="https://img.shields.io/badge/%E6%8A%80%E8%83%BD-HTML-orange?style=for-the-badge"
+            class="mdui-img-rounded img-fluid"
+          />
+          <br />
+          <div class="mdui-progress">
+            <div class="mdui-progress-determinate" style="width: 50%"></div>
+          </div>
+          <img
+            src="https://img.shields.io/badge/%E6%8A%80%E8%83%BD-生草之力-orange?style=for-the-badge"
+            class="mdui-img-rounded img-fluid"
+          />
+          <div class="mdui-progress">
+            <div class="mdui-progress-determinate" style="width: 70%"></div>
+          </div>
+          <img
+            src="https://img.shields.io/badge/%E6%8A%80%E8%83%BD-%E6%91%B8%E9%B1%BC%E8%83%BD%E5%8A%9B-orange?style=for-the-badge"
+            class="mdui-img-rounded img-fluid"
+          />
+          <div class="mdui-progress">
+            <div class="mdui-progress-determinate" style="width: 100%"></div>
+          </div>
+        </div>
+        <br />
+        <div class="mdui-divider"></div>
+        <br />
+        <div class="mdui-typo-headline">
+          <div>听听音乐</div>
+          <meting-js
+            server="tencent"
+            type="playlist"
+            id="7628044420"
+            preload="metadata"
+            list-folded="true"
+          ></meting-js>
+        </div>
+        <br />
+        <div class="mdui-divider"></div>
+        <br />
+        <div class="mdui-typo">
+          <div class="mdui-typo-headline">Github 状态统计图</div>
+          <img
+            align="center"
+            src="https://github-readme-stats.vercel.app/api?username=Gongcxgithub&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true"
+            class="mdui-img-rounded img-fluid"
+          />
+        </div>
+        <br />
+        <div class="mdui-divider"></div>
+        <br />
+        <div class="mdui-btn-group">
+          <button
+            type="button"
+            class="mdui-btn"
+            mdui-dialog="{target: '#wechat'}"
+          >
+            <i class="mdui-icon fab fa-weixin"></i>
+          </button>
+          <button type="button" class="mdui-btn" mdui-dialog="{target: '#qq'}">
+            <i class="mdui-icon fab fa-qq"></i>
+          </button>
+          <button
+            type="button"
+            class="mdui-btn"
+            mdui-dialog="{target: '#telegram'}"
+          >
+            <i class="mdui-icon fab fa-telegram"></i>
+          </button>
+          <br />
+          <br />
+        </div>
+      </div>
+    </center>
+    <div class="mdui-dialog" id="wechat">
+      <div class="mdui-tab mdui-tab-full-width" id="wechat-tab">
+        <a href="#wechat-tab1" class="mdui-ripple">加我好友</a>
+        <a href="#wechat-tab2" class="mdui-ripple">赞助我</a>
+      </div>
+      <div id="wechat-tab1" class="mdui-p-a-2 mdui-typo">
+        <center>
+          <div class="mdui-typo-body-1">扫描下面的二维码加我的微信吧</div>
+          <img
+            src="https://cdn-pic.gcxstudio.cn/2021/08/27/LIVP.jpg"
+            class="mdui-img-rounded mdui-img-fluid"
+            style="height: 100%; width: 50%"
+          />
+        </center>
+      </div>
+      <div id="wechat-tab2" class="mdui-p-a-2 mdui-typo">
+        <center>
+          <div class="mdui-typo-body-1">扫描下面的二维码通过微信赞助我</div>
+          <img
+            src="https://cdn-pic.gcxstudio.cn/2021/08/27/LO8E.png"
+            class="mdui-img-rounded mdui-img-fluid"
+            style="height: 100%; width: 50%"
+          />
+        </center>
+      </div>
+    </div>
+
+    <script>
+      var tab = new mdui.Tab("#wechat-tab");
+      document
+        .getElementById("wechat")
+        .addEventListener("open.mdui.dialog", function () {
+          tab.handleUpdate();
+        });
+    </script>
+    <div class="mdui-dialog" id="qq">
+      <div class="mdui-tab mdui-tab-full-width" id="qq-tab">
+        <a href="#qq-tab1" class="mdui-ripple">加我好友</a>
+        <a href="#qq-tab2" class="mdui-ripple">赞助我</a>
+      </div>
+      <div id="qq-tab1" class="mdui-p-a-2 mdui-typo">
+        <center>
+          <div class="mdui-typo-body-1">扫描下面的二维码加我的 QQ 吧</div>
+          <img
+            src="https://cdn-pic.gcxstudio.cn/2021/08/27/LoQ7.png"
+            class="mdui-img-rounded mdui-img-fluid"
+            style="height: 100%; width: 50%"
+          />
+        </center>
+      </div>
+      <div id="qq-tab2" class="mdui-p-a-2 mdui-typo">
+        <center>
+          <div class="mdui-typo-body-1">扫描下面的二维码通过 QQ 赞助我</div>
+          <img
+            src="https://cdn-pic.gcxstudio.cn/2021/08/27/Llxu.png"
+            class="mdui-img-rounded mdui-img-fluid"
+            style="height: 100%; width: 50%"
+          />
+        </center>
+      </div>
+    </div>
+    <script>
+      var tab2 = new mdui.Tab("#qq-tab");
+      document
+        .getElementById("qq")
+        .addEventListener("open.mdui.dialog", function () {
+          tab2.handleUpdate();
+        });
+    </script>
+    <div class="mdui-dialog" id="telegram">
+      <div class="mdui-dialog-title" style="text-align: center">
+        通过下面的方式与我在 Telegram 交流吧
+      </div>
+      <div class="mdui-dialog-content" style="text-align: center">
+        Telegram 搜索用户 @Gong_cx
+      </div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+    </div>
+    <footer style="text-align: center" class="mdui-typo">
+      <div class="container">
+        <div>
+          2020-2021 © Gong_cx . All rights reserved | 备案号:
+          <a href="https://beian.miit.gov.cn/" target="_blank" one-link-mark="yes">赣ICP备2021005460号-1</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

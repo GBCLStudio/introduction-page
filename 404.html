@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-top: 10%;
+      }
+
+      .jumbotron {
+        font-size: 21px;
+        font-weight: 200;
+        line-height: 2.1428571435;
+        color: inherit;
+        padding: 10px 0px;
+      }
+
+      .masthead,
+      .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .jumbotron {
+        text-align: center;
+        background-color: transparent;
+      }
+
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      .green {
+        color: #5cb85c;
+      }
+
+      .orange {
+        color: #f0ad4e;
+      }
+
+      .red {
+        color: #d9534f;
+      }
+    </style>
+    <script type="text/javascript">
+      function loadDomain() {
+        var display = document.getElementById("display-domain");
+        display.innerHTML = document.domain;
+      }
+    </script>
+  </head>
+
+  <body onload="javascript:loadDomain();">
+    <!-- Error Page Content -->
+    <div class="container">
+      <div class="jumbotron">
+        <h1>
+          <i class="fas fa-exclamation-triangle orange"></i> 404 Not Found
+        </h1>
+        <p class="lead">很抱歉，我们无法在网站目录内找到您需要的文件。</p>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div class="container">
+      <div class="body-content">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>发生了什么？</h2>
+            <p>
+              您看到此页面，说明服务器端无法找到所请求的资源。返回该响应的链接通常称为坏链（broken link）或死链（dead link）。
+            </p>
+            <h4>这代表什么？</h4>
+            <p>这代表辣鸡站长可能忘记传文件了，这不得私聊骂他傻逼。</p>
+          </div>
+          <div class="col-md-6">
+            <h2>我应该怎么做？</h2>
+            <p class="lead"></p>
+            <h4>如果您是网站访客</h4>
+            <p>请联系网站管理员处理，或者请稍后再试试。</p>
+            <p class="lead"></p>
+            <h4>如果您是网站管理员</h4>
+            <p>
+              通常造成这种情况的原因是网站运行，目录内没有此文件，请检查网站目录。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <hr />
+        <span class="text-muted"
+          >Herobrine Not Found<br />Powered by
+          <a href="https://www.gcxstudio.cn">Gong_cx</a>. Design by
+          RainYun</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

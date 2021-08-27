@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>502 Bad Gateway</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-top: 10%;
+      }
+
+      .jumbotron {
+        font-size: 21px;
+        font-weight: 200;
+        line-height: 2.1428571435;
+        color: inherit;
+        padding: 10px 0px;
+      }
+
+      .masthead,
+      .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .jumbotron {
+        text-align: center;
+        background-color: transparent;
+      }
+
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      .green {
+        color: #5cb85c;
+      }
+
+      .orange {
+        color: #f0ad4e;
+      }
+
+      .red {
+        color: #d9534f;
+      }
+    </style>
+    <script type="text/javascript">
+      function loadDomain() {
+        var display = document.getElementById("display-domain");
+        display.innerHTML = document.domain;
+      }
+    </script>
+  </head>
+
+  <body onload="javascript:loadDomain();">
+    <!-- Error Page Content -->
+    <div class="container">
+      <div class="jumbotron">
+        <h1>
+          <i class="fas fa-exclamation-triangle orange"></i> 502 Bad Gateway
+        </h1>
+        <p class="lead">很抱歉，您收到的响应似乎是无效的。</p>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div class="container">
+      <div class="body-content">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>发生了什么？</h2>
+            <p>
+              您看到此页面，说明它表示作为网关或代理角色的服务器，从上游服务器（如tomcat、php-fpm）中接收到的响应是无效的。
+            </p>
+            <h4>这代表什么？</h4>
+            <p>这代表辣鸡站长选的什么废物服务器，随随便便就 502，私聊跟他对线。</p>
+          </div>
+          <div class="col-md-6">
+            <h2>我应该怎么做？</h2>
+            <p class="lead"></p>
+            <h4>如果您是网站访客</h4>
+            <p>请联系网站管理员处理，或者请稍后再试试。</p>
+            <p class="lead"></p>
+            <h4>如果您是网站管理员</h4>
+            <p>
+                502 错误通常不是客户端能够修复的，而是需要由途径的 Web 服务器或者代理服务器对其进行修复。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <hr />
+        <span class="text-muted"
+          >Herobrine 对你发出的响应似乎是无效的<br />Powered by
+          <a href="https://www.gcxstudio.cn">Gong_cx</a>. Design by
+          RainYun</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
