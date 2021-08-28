@@ -19,4 +19,4 @@
    
 状态记录 API：
 
- [![UptimeRobot](https://img.shields.io/static/v1?label=%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95%20API&message=UptimeRobot&color=orange&labelColor=&style=for-the-badge&logo=fastapi&logo=brightgreen)](https://uptimerobot.com/)
+ [![UptimeRobot](https://img.shields.io/static/v1?label=%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95%20API&message=UptimeRobot&color=orange&labelColor=&style=for-the-badge&logo=fastapi&logoColor=brightgreen)](https://uptimerobot.com/)
