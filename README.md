@@ -1,7 +1,13 @@
 # Gong_cx 个人介绍页模板
 [![仓库资料卡](https://github-readme-stats.vercel.app/api/pin/?username=GBCLStudio&repo=introduction-page&theme=vue&show_owner=true)](https://github.com/GBCLStudio/introduction-page)
 
-本仓库为个人介绍页面模板，内容在 index.html，index.html 已配置 Demo
+本仓库为个人介绍页面模板，主要通过 MDUI 和 Bootstrap 实现
+
+### 如何使用？
+
+- First step:在服务器的网站运行目录内执行:git clone https://github.com/GBCLStudio/introduction-page.git
+- Second step:修改 index.html 内容到您喜欢的样子
+- Third step:随意使用并给项目一个 Star
 
 如需查看实现效果请看：[https://gcxstudio.cn](https://gcxstudio.cn)
 
