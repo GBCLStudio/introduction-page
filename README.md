@@ -16,3 +16,7 @@
 外部调用:
 
    [![Shields.io](https://img.shields.io/static/v1?label=%E5%B0%8F%E5%8D%A1%E7%89%87&message=Shields.io&color=orange&labelColor=&style=for-the-badge&logo=Shields.io)](https://shields.io/)   [![API](https://img.shields.io/static/v1?label=%E4%BF%A1%E6%81%AF%E8%8E%B7%E5%8F%96%20API&message=Substats&color=orange&labelColor=&style=for-the-badge&logo=FastAPI&logoColor=brightgreen)](https://substats.spencerwoo.com/api.html)   [![统计卡](https://img.shields.io/static/v1?label=Github%20%E4%BF%A1%E6%81%AF%E7%BB%9F%E8%AE%A1%E5%8D%A1&message=GitHub%20Readme%20Stats&color=orange&labelColor=&style=for-the-badge&logo=Github)](https://github.com/anuraghazra/github-readme-stats)
+   
+状态记录 API：
+
+ [![UptimeRobot](https://img.shields.io/static/v1?label=状态记录 API&message=UptimeRobot&color=orange&labelColor=&style=for-the-badge&logo=fastapi&logo=brightgreen)](https://uptimerobot.com/)
