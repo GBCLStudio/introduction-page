@@ -1,5 +1,5 @@
 # Gong_cx 个人介绍页模板
-[![仓库资料卡](https://github-readme-stats.vercel.app/api/pin/?username=GBCLStudio&repo=introduction-page&theme=flag-india&show_owner=true)](https://github.com/GBCLStudio/introduction-page)
+[![仓库资料卡](https://github-readme-stats.vercel.app/api/pin/?username=GBCLStudio&repo=introduction-page&theme=buefy&show_owner=true)](https://github.com/GBCLStudio/introduction-page)
 
 本仓库为个人介绍页面模板，主要通过 MDUI 和 Bootstrap 实现
 
@@ -13,9 +13,9 @@
 
 Support my development on [爱发电](https://afdian.net/@GBCLStudio)!
 
-求 Star 呜呜呜：
+求 Star 喵喵喵：
 
-![GitHub Repo stars](https://img.shields.io/github/stars/GBCLStudio/introduction-page?label=%E6%9C%AC%E4%BB%93%E5%BA%93%20Star%20%E6%95%B0&logo=Github&color=orange&style=for-the-badge&labelColor=blue)
+[![GitHub Repo stars](https://img.shields.io/github/stars/GBCLStudio/introduction-page?label=%E6%9C%AC%E4%BB%93%E5%BA%93%20Star%20%E6%95%B0&logo=Github&color=orange&style=for-the-badge&labelColor=blue)](https://github.com/GBCLStudio/introduction-page)
 
 ### 其他：
 
