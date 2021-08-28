@@ -5,6 +5,10 @@
 
 如需查看实现效果请看：[https://gcxstudio.cn](https://gcxstudio.cn)
 
+其他：
+
+   [![运行状态](https://img.shields.io/website?down_color=red&labelColor=blue&down_message=Offline%20%7C%20%E4%B8%8B%E7%BA%BF&label=DEMO 演示页运行状态&style=for-the-badge&up_color=green&up_message=Online%20%7C%20%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fgcxstudio.cn "awa")](https://gcxstudio.cn)   [![License](https://img.shields.io/github/license/GBCLStudio/introduction-page?color=orange&labelColor=blue&label=%E6%88%91%E4%BB%AC%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8&logo=GNU&style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0.html)
+
 联系作者:
 
    ![QQ](https://img.shields.io/static/v1?label=%E8%85%BE%E8%AE%AF%20QQ&message=3175992523&color=orange&style=for-the-badge&labelColor=blue&logoColor=black&logo=Tencent%20QQ)   ![Telegram](https://img.shields.io/static/v1?label=Telegram&message=@Gong_cx&color=blue&style=for-the-badge&labelColor=green&logo=telegram)   [![Discord](https://img.shields.io/discord/879563083616489502?label=Discord%20%E6%9C%8D%E5%8A%A1%E5%99%A8&logo=discord&style=for-the-badge)](https://discord.com/channels/879563083616489502/)
