@@ -107,7 +107,7 @@
         console.log(
           "%c本站正在使用:%c Introduction",
           "color: rgba(255,255,255,.6); background: #2196f3; font-size: 15px;border-radius:5px 0 0 5px;padding:10px 0 10px 20px;",
-          "color: rgba(255,255,255,1); background: #2196f3; font-size: 15px;border-radius:0;padding:10px 15px 10px 0px;",
+          "color: rgba(255,255,255,1); background: #2196f3; font-size: 15px;border-radius:0;padding:10px 15px 10px 0px;"
         );
       })();
       console.log(
@@ -207,6 +207,10 @@
         margin-top: 1rem;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js"></script>
+    <!--👆👆外部 FLV 解析器-->
+    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+    <!--👆👆DPlayer-->
     <!-- require APlayer -->
     <link
       rel="stylesheet"
@@ -219,10 +223,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css"
     />
-    <script
-      src="https://v1.hitokoto.cn/?encode=js&c=a&c=d&c=a&c=l&c=6&c=j&max_length=24&select=%23hitokoto"
-      defer
-    ></script>
+    <script>
+      fetch(
+        "https://v1.hitokoto.cn/?encode=json&c=a&c=d&c=a&c=l&c=6&c=j&max_length=24&select=%23hitokoto"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const hitokoto = document.getElementById("hitokoto_text");
+          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+          hitokoto.innerText = "『" + data.hitokoto + "』";
+          const from = document.getElementById("who");
+          from.innerText = "——" + data.from + "「" + data.from_who + "」";
+        })
+        .catch(console.error);
+    </script>
   </head>
 
   <body>
@@ -362,7 +376,9 @@
               >:D 获取中...</a
             >
           </p>
-          <footer style="text-align: right">引用自：Hitokoto</footer>
+          <footer style="text-align: right">
+            <div id="from"><p id="who"></p></div>
+          </footer>
         </blockquote>
         <div class="mdui-typo-body1">
           一个菜逼，每天都不知道在做什么，特长闲来无事隔着学前端，总结：真是个没意思的人
@@ -534,9 +550,18 @@
       </div>
       <div class="mdui-dialog-content" style="text-align: center">
         Telegram 搜索用户 @Gong_cx<br />或者加入 GBCLStudio 的公告发布频道：
-        <a href="https://t.me/gbclstudio_news" one-link-mark="yes" target="_blank">
-            <img src="https://img.shields.io/static/v1?label=%E6%9B%B4%E6%96%B0%E8%B5%84%E8%AE%AF&message=GBCLStudio%27s%20Update%20information&color=blue&style=for-the-badge&labelColor=green&logo=telegram" class="img-fluid mdui-img-rounded" alt="Telegram 公告频道" style="text-align: -webkit-center;" />
-            </a>
+        <a
+          href="https://t.me/gbclstudio_news"
+          one-link-mark="yes"
+          target="_blank"
+        >
+          <img
+            src="https://img.shields.io/static/v1?label=%E6%9B%B4%E6%96%B0%E8%B5%84%E8%AE%AF&message=GBCLStudio%27s%20Update%20information&color=blue&style=for-the-badge&labelColor=green&logo=telegram"
+            class="img-fluid mdui-img-rounded"
+            alt="Telegram 公告频道"
+            style="text-align: -webkit-center"
+          />
+        </a>
       </div>
       <div class="mdui-dialog-actions">
         <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
