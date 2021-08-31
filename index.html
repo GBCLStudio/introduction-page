@@ -226,23 +226,26 @@
     />
     <!-- 👆👆图标包 -->
     <script>
-      fetch(
-        "https://v1.hitokoto.cn/?encode=json&c=a&c=d&c=a&c=l&c=6&c=j&max_length=24&select=%23hitokoto"
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          const hitokoto = document.getElementById("hitokoto_text");
-          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-          hitokoto.innerText = "『" + data.hitokoto + "』";
-          const from = document.getElementById("who");
-          var from_who = data.from_who == null ? "无名氏" : data.from_who;
-          from.innerText = "引用自：" + from_who + "「" + data.from + "」";
-        })
-        .catch(console.error);
+      setInterval("hitokoto()", 6000);
+      function hitokoto() {
+        fetch(
+          "https://v1.hitokoto.cn/?encode=json&c=a&c=d&c=a&c=l&c=6&c=j&max_length=24&select=%23hitokoto"
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            const hitokoto = document.getElementById("hitokoto_text");
+            hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+            hitokoto.innerText = "『" + data.hitokoto + "』";
+            const from = document.getElementById("who");
+            var from_who = data.from_who == null ? "无名氏" : data.from_who;
+            from.innerText = "引用自：" + from_who + "「" + data.from + "」";
+          })
+          .catch(console.error);
+      }
     </script>
   </head>
 
-  <body>
+  <body onload="hitokoto();">
     <header class="mdui-appbar mdui-appbar-fixed" mdui-headroom>
       <div class="mdui-toolbar">
         <a
@@ -350,6 +353,7 @@
             class="mdui-img-fluid mdui-img-rounded"
           />
         </a>
+        <br />
         <a
           href="https://status.gong-cx.top"
           target="_blank"
@@ -362,6 +366,7 @@
             class="mdui-img-fluid mdui-img-rounded"
           />
         </a>
+        <br />
         <div class="mdui-chip">
           <img
             class="mdui-chip-icon"
