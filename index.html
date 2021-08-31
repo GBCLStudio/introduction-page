@@ -34,7 +34,7 @@
     <meta property="og:locale" content="zh_CN" />
     <meta
       property="og:image"
-      content="https://q2.qlogo.cn/headimg_dl?dst_uin=1553809191&amp;spec=5"
+      content="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
     />
     <meta property="article:author" content="2020-2021 © Gong_cx" />
     <meta property="article:tag" content="Gong_cx,小恐龙,恐龙酱" />
@@ -233,7 +233,8 @@
           hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
           hitokoto.innerText = "『" + data.hitokoto + "』";
           const from = document.getElementById("who");
-          from.innerText = "——" + data.from + "「" + data.from_who + "」";
+          var from_who = data.from_who == null ? "无名氏" : data.from_who;
+          from.innerText = "引用自：" + from_who + "「" + data.from + "」";
         })
         .catch(console.error);
     </script>
@@ -251,34 +252,32 @@
         >
           <img
             src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
-            class="
-              mdui-icon mdui-img-fluid mdui-img-rounded mdui-hidden-lg-down
-            "
+            class="mdui-icon mdui-img-fluid mdui-img-rounded"
             style="width: 24px; height: 24px"
           />
         </a>
         <span class="mdui-typo-title-opacity">Gong_cx 恐龙酱</span>
         <div class="mdui-toolbar-spacer"></div>
         <a
-          href="https://github.com/GBCLStudio/navigation"
+          href="https://github.com/GBCLStudio/introduction-page"
           target="_blank"
           class="mdui-btn mdui-ripple mdui-ripple-white mdui-hidden-lg-down"
           mdui-tooltip="{content: '本项目最后一次提交时间'}"
           one-link-mark="yes"
         >
           <img
-            src="https://img.shields.io/github/last-commit/GBCLStudio/navigation?color=orange&label=%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8F%90%E4%BA%A4&style=for-the-badge"
+            src="https://img.shields.io/github/last-commit/GBCLStudio/introduction-page?color=orange&label=%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8F%90%E4%BA%A4&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded"
         /></a>
         <a
-          href="https://github.com/GBCLStudio/navigation"
+          href="https://github.com/GBCLStudio/introduction-page"
           target="_blank"
           class="mdui-btn mdui-ripple mdui-ripple-white mdui-hidden-lg-down"
           mdui-tooltip="{content: '本项目 Star 量'}"
           one-link-mark="yes"
         >
           <img
-            src="https://img.shields.io/github/stars/GBCLStudio/navigation?color=orange&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%20Star%20%E6%95%B0%E9%87%8F&style=for-the-badge"
+            src="https://img.shields.io/github/stars/GBCLStudio/introduction-page?color=orange&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%20Star%20%E6%95%B0%E9%87%8F&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded mdui-hidden-lg-down"
         /></a>
         <a
