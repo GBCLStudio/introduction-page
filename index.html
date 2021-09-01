@@ -206,11 +206,24 @@
       .highlight {
         margin-top: 1rem;
       }
+
+      #author_name {
+        color: #f35626;
+        background: coral;
+        background-image: -webkit-linear-gradient(45deg, #fcdf8a, #f38381);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 3s infinite linear;
+      }
+      @-webkit-keyframes hue {
+        from {
+          -webkit-filter: hue-rotate(0deg);
+        }
+        to {
+          -webkit-filter: hue-rotate(-360deg);
+        }
+      }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js"></script>
-    <!--👆👆外部 FLV 解析器-->
-    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
-    <!--👆👆DPlayer-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"
@@ -241,6 +254,33 @@
             from.innerText = "引用自：" + from_who + "「" + data.from + "」";
           })
           .catch(console.error);
+      }
+    </script>
+    <script>
+      var HomoValue = 0;
+      function onClickHomo() {
+        HomoValue += 1;
+        if (HomoValue == 11) {
+          mdui.snackbar({
+            message: "你已经点了这个按钮 11.4514 次了，我要开始哼哼了",
+            buttonText: "哼哼",
+            position: "right-top",
+            onButtonClick: function () {
+              mdui.alert(
+                "哼哼啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊"
+              );
+            },
+            onClick: function () {
+              mdui.alert("点提示框干什么啊");
+            },
+          });
+        }
+        if (HomoValue > 20) {
+          mdui.snackbar({
+            message: "别再点了哼，彩蛋你都知道了",
+            position: "right-top",
+          });
+        }
       }
     </script>
   </head>
@@ -338,6 +378,7 @@
         <div class="mdui-divider"></div>
         <h2
           mdui-tooltip="{content: '超级懒的废物一个，每天无所事事', position: 'top',delay: 300}"
+          id="author_name"
         >
           Gong_cx
         </h2>
@@ -402,6 +443,13 @@
             >https://www.gcxstudio.cn</a
           >
         </div>
+        <button
+          class="mdui-btn mdui-color-blue-accent mdui-ripple"
+          onclick="onClickHomo()"
+        >
+          奇怪的按钮
+        </button>
+        <br />
         <br />
         <div class="mdui-divider"></div>
         <br />
