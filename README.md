@@ -3,6 +3,8 @@
 
 本仓库为个人介绍页面模板，主要通过 MDUI 和 Bootstrap 实现
 
+在 v1.0.2 版本，作者加入了一个彩蛋，当一个按钮按下次数达 11 次事触发提示框，彩蛋代码可移除
+
 欢迎加入我们的新 Telegram 频道，本频道用于发布 GBCLStudio 的最新消息:
 
 [![Telegram  群组](https://img.shields.io/static/v1?label=%E6%9B%B4%E6%96%B0%E8%B5%84%E8%AE%AF&message=GBCLStudio%27s%20Update%20information&color=blue&style=for-the-badge&labelColor=green&logo=telegram)](https://t.me/gbclstudio_news)
