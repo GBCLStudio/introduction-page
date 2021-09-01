@@ -9,7 +9,8 @@
 ║开发者藏了一个小彩蛋
 ║源码内注释较少，后续会有的 awa
 ║代码格式化工具：Prettier（推荐）
-║如需修改请按照 GPL 3.0 协议，=
+║如需修改请按照 GPL 3.0 协议
+║本源码依赖于 BUG 运行，不宜随意修改代码，运行原理我也不知道
 ╚═════════════════════════════════════════════════════════════════════════════════════════════════════
 -->
 
@@ -116,7 +117,7 @@
     ></script>
     <!--👆👆看板娘-->
     <script>
-      // 控制台小彩蛋
+      // 控制台版权归属
       !(function () {
         console.log(
           "%c本站正在使用:%c Introduction",
@@ -134,6 +135,7 @@
         "font-size: 12px;border-radius:5px;padding:3px 10px 3px 10px;border:1px solid #FF9900;"
       );
     </script>
+    <!--👆👆控制台版权归属-->
     <style>
       body {
         height: 100%;
@@ -159,8 +161,7 @@
         background-position: top left, center center, bottom center;
         background-attachment: fixed, fixed, fixed;
       }
-
-      #main {
+      <!--👆👆主体CSS-- > #main {
         height: 500px;
         width: 500px;
         padding-top: 68px;
@@ -174,7 +175,6 @@
         text-align: center;
         width: 27em;
       }
-
       #wrapper {
         display: -moz-flex;
         display: -webkit-flex;
@@ -201,7 +201,6 @@
         padding: 1.5em;
         z-index: 2;
       }
-
       #main::before {
         content: "";
         display: grid;
@@ -216,11 +215,9 @@
         transform: translate(0, 105px) scale(0.4, 0.4);
         z-index: -1;
       }
-
       .highlight {
         margin-top: 1rem;
       }
-
       #author_name {
         color: #f35626;
         background: coral;
@@ -270,6 +267,7 @@
           .catch(console.error);
       }
     </script>
+    <!-- 👆👆一言 -->
     <script>
       var HomoValue = 0;
       function onClickHomo() {
@@ -297,6 +295,7 @@
         }
       }
     </script>
+    <!-- 👆👆彩蛋 -->
   </head>
 
   <body onload="hitokoto();">
@@ -374,8 +373,10 @@
         </a>
       </div>
     </header>
+    <!-- 👆👆顶部栏 -->
     <br />
     <center id="wrapper">
+      <!-- 👆👆容器 -->
       <div
         align="center"
         class="container bg-light mdui-typo"
@@ -463,6 +464,7 @@
         >
           奇怪的按钮
         </button>
+        <!-- 👆👆彩蛋按钮 -->
         <br />
         <br />
         <div class="mdui-divider"></div>
@@ -569,7 +571,7 @@
         </center>
       </div>
     </div>
-
+    <!-- 👆👆微信联系方式 -->
     <script>
       var tab = new mdui.Tab("#wechat-tab");
       document
@@ -578,6 +580,7 @@
           tab.handleUpdate();
         });
     </script>
+    <!-- 👆👆Tab切换JS - 微信 -->
     <div class="mdui-dialog" id="qq">
       <div class="mdui-tab mdui-tab-full-width" id="qq-tab">
         <a href="#qq-tab1" class="mdui-ripple">加我好友</a>
@@ -604,6 +607,7 @@
         </center>
       </div>
     </div>
+    <!-- 👆👆QQ联系方式 -->
     <script>
       var tab2 = new mdui.Tab("#qq-tab");
       document
@@ -612,6 +616,7 @@
           tab2.handleUpdate();
         });
     </script>
+    <!-- 👆👆Tab切换JS - QQ -->
     <div class="mdui-dialog" id="telegram">
       <div class="mdui-dialog-title" style="text-align: center">
         通过下面的方式与我在 Telegram 交流吧
@@ -635,6 +640,7 @@
         <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
       </div>
     </div>
+    <!-- 👆👆TG联系方式 -->
     <footer style="text-align: center" class="mdui-typo">
       <div class="container">
         <div>
