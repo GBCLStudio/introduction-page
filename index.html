@@ -3,11 +3,9 @@
 <!--
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════
 ║title: Gong_cx's Introduction Page
-║网站 v1.0.2 版本
+║网站 v1.0.3 版本
 ║网站由 Gong_cx 制作
 ║版权归属：Gong_cx
-║开发者藏了一个小彩蛋
-║源码内注释较少，后续会有的 awa
 ║代码格式化工具：Prettier（推荐）
 ║如需修改请按照 GPL 3.0 协议
 ║本源码依赖于 BUG 运行，不宜随意修改代码，运行原理我也不知道
@@ -161,6 +159,7 @@
         background-position: top left, center center, bottom center;
         background-attachment: fixed, fixed, fixed;
       }
+      /* 背景颜色渐变效果 */
       #main {
         height: 500px;
         width: 500px;
@@ -175,6 +174,7 @@
         text-align: center;
         width: 27em;
       }
+      /* 网站全部主要内容 */
       #wrapper {
         display: -moz-flex;
         display: -webkit-flex;
@@ -201,6 +201,7 @@
         padding: 1.5em;
         z-index: 2;
       }
+      /* 容器 */
       #main::before {
         content: "";
         display: grid;
@@ -215,9 +216,11 @@
         transform: translate(0, 105px) scale(0.4, 0.4);
         z-index: -1;
       }
+      /* 容器图片 */
       .highlight {
         margin-top: 1rem;
       }
+      /* 文字高亮效果 */
       #author_name {
         color: #f35626;
         background: coral;
@@ -227,6 +230,7 @@
         -webkit-text-fill-color: transparent;
         animation: hue 3s infinite linear;
       }
+      /* 文字颜色渐变效果 ID 选择器 */
       @keyframes hue {
         from {
           -webkit-filter: hue-rotate(0deg);
@@ -235,6 +239,7 @@
           -webkit-filter: hue-rotate(-360deg);
         }
       }
+      /* 文字颜色渐变效果 */
     </style>
     <link
       rel="stylesheet"
@@ -251,28 +256,33 @@
     />
     <!-- 👆👆图标包 -->
     <script>
-      setInterval("hitokoto()", 6000);
+      setInterval("hitokoto()", 6000); // 设置循环一言函数，6000毫秒一次
       function hitokoto() {
+        // 定义一言代码段为函数
         fetch(
           "https://v1.hitokoto.cn/?encode=json&c=a&c=d&c=a&c=l&c=6&c=j&max_length=24&select=%23hitokoto"
-        )
+        ) // 获取一言内容
           .then((response) => response.json())
           .then((data) => {
             const hitokoto = document.getElementById("hitokoto_text");
-            hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+            hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid; // 设置获取一言内容详细地址信息
             hitokoto.innerText = "『" + data.hitokoto + "』";
             const from = document.getElementById("who");
-            var from_who = data.from_who == null ? "无名氏" : data.from_who;
-            from.innerText = "引用自：" + from_who + "「" + data.from + "」";
+            var from_who = data.from_who == null ? "无名氏" : data.from_who; // 使用条件运算符对数据 from_who 内容进行判断
+            from.innerText = "引用自：" + from_who + "「" + data.from + "」"; // 作者信息字符串
           })
-          .catch(console.error);
+          .catch(console.error); // 控制台抓取错误信息
       }
     </script>
     <!-- 👆👆一言 -->
     <script>
+      // 定义变量 HomoValue
       var HomoValue = 0;
       function onClickHomo() {
-        HomoValue += 1;
+        HomoValue += 1; // 当被点击，变量值加一
+        if (HomoValue < 5) {
+          hitokoto();
+        }
         if (HomoValue == 11) {
           mdui.snackbar({
             message: "你已经点了这个按钮 11.4514 次了，我要开始哼哼了",
@@ -288,6 +298,7 @@
             },
           });
         }
+        // 判断变量值并作出反馈
         if (HomoValue > 20) {
           mdui.snackbar({
             message: "别再点了哼，彩蛋你都知道了",
@@ -295,12 +306,15 @@
           });
         }
       }
+      // 后续内容
     </script>
     <!-- 👆👆彩蛋 -->
   </head>
 
   <body onload="hitokoto();">
+    <!-- 👆👆在网站加载完后第一次运行一言函数 -->
     <header class="mdui-appbar mdui-appbar-fixed" mdui-headroom>
+      <!-- 👆👆在头部放置顶部栏并设置向下滚动时消失 -->
       <div class="mdui-toolbar">
         <a
           href="/index.html"
@@ -316,6 +330,7 @@
           />
         </a>
         <span class="mdui-typo-title-opacity">Gong_cx 恐龙酱</span>
+        <!-- 👆👆设置标题 -->
         <div class="mdui-toolbar-spacer"></div>
         <a
           href="https://github.com/GBCLStudio/introduction-page"
@@ -328,6 +343,7 @@
             src="https://img.shields.io/github/last-commit/GBCLStudio/introduction-page?color=orange&label=%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8F%90%E4%BA%A4&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded"
         /></a>
+        <!-- 👆👆顶部栏小卡片 -->
         <a
           href="https://github.com/GBCLStudio/introduction-page"
           target="_blank"
@@ -339,42 +355,30 @@
             src="https://img.shields.io/github/stars/GBCLStudio/introduction-page?color=orange&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%20Star%20%E6%95%B0%E9%87%8F&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded mdui-hidden-lg-down"
         /></a>
+        <!-- 👆👆顶部栏小卡片 -->
+        <a
+          href="https://afdian.net/@GBCLstudio"
+          target="_blank"
+          class="mdui-btn mdui-btn-icon mdui-ripple"
+          mdui-tooltip="{content: '赞助这只恐龙吧！'}"
+          one-link-mark="yes"
+        >
+          <i class="mdui-icon material-icons">&#xe263;</i>
+        </a>
+        <!-- 👆👆赞助按钮 -->
         <a
           href="https://github.com/gongcxgithub"
           target="_blank"
-          class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+          class="mdui-btn mdui-btn-icon mdui-ripple"
           mdui-tooltip="{content: '查看 Github'}"
           one-link-mark="yes"
         >
-          <svg
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 36 36"
-            enable-background="new 0 0 36 36"
-            xml:space="preserve"
-            class="mdui-icon img-fluid"
-            style="width: 24px; height: 24px"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              fill="#ffffff"
-              d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
-      c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
-      c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
-      c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
-      c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
-      c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"
-            ></path>
-          </svg>
+          <i class="fab fa-github mdui-icon img-fluid"></i>
         </a>
+        <!-- 👆👆Github 图标 -->
       </div>
     </header>
-    <!-- 👆👆顶部栏 -->
+    <!-- 👆👆顶部栏全部代码 -->
     <br />
     <center id="wrapper">
       <!-- 👆👆容器 -->
@@ -384,12 +388,14 @@
         id="main"
         style="height: auto"
       >
+        <!-- 👆👆使用 Bootstrap 容器 -->
         <img
           src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
           alt=""
           class="rounded mx-auto d-block mdui-img-circle"
           style="width: 122px; height: 122px"
         />
+        <!-- 👆👆头像 -->
         <br />
         <div class="mdui-divider"></div>
         <h2
@@ -398,6 +404,7 @@
         >
           Gong_cx
         </h2>
+        <!-- 👆👆作者信息 -->
         <a
           href="https://status.gong-cx.top"
           target="_blank"
@@ -410,6 +417,7 @@
             class="mdui-img-fluid mdui-img-rounded"
           />
         </a>
+        <!-- 👆👆小卡片 1 -->
         <br />
         <a
           href="https://status.gong-cx.top"
@@ -423,14 +431,17 @@
             class="mdui-img-fluid mdui-img-rounded"
           />
         </a>
+        <!-- 👆👆小卡片 2 -->
         <br />
         <div class="mdui-chip">
           <img
             class="mdui-chip-icon"
             src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
           />
+          <!-- 👆👆标签前图 -->
           <span class="mdui-chip-title">外号：恐龙酱，快来陪我 van ♂</span>
         </div>
+        <!-- 👆👆标签内容 -->
         <blockquote>
           <p style="text-align: left" id="hitokoto">
             <a
@@ -439,13 +450,17 @@
               >:D 获取中...</a
             >
           </p>
+          <!-- 👆👆一言正文 / 引用内容上半部分 -->
           <footer style="text-align: right">
             <div id="from"><p id="who"></p></div>
           </footer>
+          <!-- 👆👆引用内容下半部分 -->
         </blockquote>
+        <!-- 👆👆引用内容代码组 -->
         <div class="mdui-typo-body1">
           一个菜逼，每天都不知道在做什么，特长闲来无事隔着学前端，总结：真是个没意思的人
         </div>
+        <!-- 👆👆作者简介 -->
         <div class="highlight">
           <span
             ><img
@@ -459,16 +474,18 @@
             >https://www.gcxstudio.cn</a
           >
         </div>
+        <!-- 👆👆高亮内容 -->
         <button
           class="mdui-btn mdui-color-blue-accent mdui-ripple"
           onclick="onClickHomo()"
         >
-          奇怪的按钮
+          多按我几下
         </button>
         <!-- 👆👆彩蛋按钮 -->
         <br />
         <br />
         <div class="mdui-divider"></div>
+        <!-- 👆👆分割线 -->
         <br />
         <div class="mdui-typo-headline">
           战斗力指数
@@ -498,6 +515,7 @@
         </div>
         <br />
         <div class="mdui-divider"></div>
+        <!-- 👆👆分割线 -->
         <br />
         <div class="mdui-typo-headline">
           <div>听听音乐</div>
@@ -508,9 +526,11 @@
             preload="metadata"
             list-folded="true"
           ></meting-js>
+          <!-- 👆👆使用 MetingJS 解析歌单（版权归原作者所有） -->
         </div>
         <br />
         <div class="mdui-divider"></div>
+        <!-- 👆👆分割线 -->
         <br />
         <div class="mdui-typo">
           <div class="mdui-typo-headline">Github 状态统计图</div>
@@ -522,8 +542,10 @@
         </div>
         <br />
         <div class="mdui-divider"></div>
+        <!-- 👆👆分割线 -->
         <br />
         <div class="mdui-btn-group">
+          <!-- 👆👆设置一个按钮组 -->
           <button
             type="button"
             class="mdui-btn"
@@ -531,9 +553,11 @@
           >
             <i class="mdui-icon fab fa-weixin"></i>
           </button>
+          <!-- 👆👆微信按钮 -->
           <button type="button" class="mdui-btn" mdui-dialog="{target: '#qq'}">
             <i class="mdui-icon fab fa-qq"></i>
           </button>
+          <!-- 👆👆QQ按钮 -->
           <button
             type="button"
             class="mdui-btn"
@@ -541,13 +565,16 @@
           >
             <i class="mdui-icon fab fa-telegram"></i>
           </button>
+          <!-- 👆👆Telegram 按钮 -->
           <br />
           <br />
         </div>
       </div>
     </center>
     <div class="mdui-dialog" id="wechat">
+      <!-- 👆👆设置微信对话框 -->
       <div class="mdui-tab mdui-tab-full-width" id="wechat-tab">
+        <!-- 👆👆微信 Tab 栏 -->
         <a href="#wechat-tab1" class="mdui-ripple">加我好友</a>
         <a href="#wechat-tab2" class="mdui-ripple">赞助我</a>
       </div>
@@ -574,7 +601,7 @@
     </div>
     <!-- 👆👆微信联系方式 -->
     <script>
-      var tab = new mdui.Tab("#wechat-tab");
+      var tab = new mdui.Tab("#wechat-tab"); // 创建一个新的 Tab 变量
       document
         .getElementById("wechat")
         .addEventListener("open.mdui.dialog", function () {
@@ -582,6 +609,7 @@
         });
     </script>
     <!-- 👆👆Tab切换JS - 微信 -->
+    <!-- 后续内容同理，无需多言 -->
     <div class="mdui-dialog" id="qq">
       <div class="mdui-tab mdui-tab-full-width" id="qq-tab">
         <a href="#qq-tab1" class="mdui-ripple">加我好友</a>
@@ -655,5 +683,6 @@
         </div>
       </div>
     </footer>
+    <!-- 👆👆底部版权信息 -->
   </body>
 </html>
