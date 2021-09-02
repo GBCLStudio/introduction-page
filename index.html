@@ -222,11 +222,12 @@
         color: #f35626;
         background: coral;
         background-image: -webkit-linear-gradient(45deg, #fcdf8a, #f38381);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-animation: hue 3s infinite linear;
+        animation: hue 3s infinite linear;
       }
-      @-webkit-keyframes hue {
+      @keyframes hue {
         from {
           -webkit-filter: hue-rotate(0deg);
         }
