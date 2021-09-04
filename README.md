@@ -3,7 +3,7 @@
 
 本仓库为个人介绍页面模板，主要通过 MDUI 和 Bootstrap 实现
 
-在 v1.0.2 版本，作者加入了一个彩蛋，当一个按钮按下次数达 11 次事触发提示框，彩蛋代码可移除
+在 v1.0.2 版本，作者加入了一个彩蛋，当一个按钮按下次数达 11 次时触发提示框，彩蛋代码可移除
 
 欢迎加入我们的新 Telegram 频道，本频道用于发布 GBCLStudio 的最新消息:
 
@@ -11,9 +11,9 @@
 
 ### 如何使用？
 
-- First step:在服务器的网站运行目录内执行:git clone https://github.com/GBCLStudio/introduction-page.git
-- Second step:修改 index.html 内容到您喜欢的样子
-- Third step:随意使用并给项目一个 Star
+- 1. 在服务器的网站运行目录内执行：git clone https://github.com/GBCLStudio/introduction-page.git
+- 2. 修改 index.html 内容到您喜欢的样子
+- 3. 随意使用并给项目一个 Star
 
 如需查看实现效果请看：[https://gcxstudio.cn](https://gcxstudio.cn)
 
