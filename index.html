@@ -3,7 +3,7 @@
 <!--
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════
 ║title: Gong_cx's Introduction Page
-║网站 v1.0.3 版本
+║网站 v1.0.4 版本
 ║网站由 Gong_cx 制作
 ║版权归属：Gong_cx
 ║代码格式化工具：Prettier（推荐）
@@ -14,6 +14,11 @@
 
 <html lang="zh">
   <head>
+    <meta charset="UTF-8" />
+    <!--👆👆HTML5 写法-->
+    <!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+      👆👆HTML 4.01 写法，需要支持旧版浏览器时启用-->
+    <!--👆👆指定 UTF-8 字符集-->
     <link
       rel="icon"
       href="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
@@ -22,28 +27,27 @@
     <!--👆👆logo-->
     <title>Gong_cx's Introduction Page</title>
     <!--👆👆title-->
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <!--👆👆老UTF-8了 html4写法-->
-    <meta charset="UTF-8" />
-    <!--👆👆老UTF-8了 html5写法-->
     <meta name="author" content="2020-2021 © Gong_cx . All rights reserved" />
     <!--👆👆SEO设置-->
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--👆👆移动端适配-->
     <meta name="keywords" content="Gong_cx,小恐龙,恐龙酱" />
     <meta
       name="copyright"
       content="2020-2021 © Gong_cx . All rights reserved"
     />
-    <meta name="description" content="不时仰望星空，星星注视着你。" />
+    <meta name="description" content="不时仰望星空，天无边，星星注视着你。" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="不时仰望星空，星星注视着你。" />
-    <meta property="og:url" content="https://gcxstudio.cn/index.html" />
-    <meta property="og:site_name" content="不时仰望星空，星星注视着你。" />
-    <meta property="og:description" content="不时仰望星空，星星注视着你。" />
+    <meta property="og:title" content="不时仰望星空，天无边，星星注视着你。" />
+    <meta property="og:url" content="https://gcxstudio.cn" />
+    <meta
+      property="og:site_name"
+      content="不时仰望星空，天无边，星星注视着你。"
+    />
+    <meta
+      property="og:description"
+      content="不时仰望星空，天无边，星星注视着你。"
+    />
     <meta property="og:locale" content="zh_CN" />
     <meta
       property="og:image"
@@ -138,16 +142,16 @@
       body {
         height: 100%;
         background-color: #ffffff;
-        background-image: url("images/overlay.png"),
+        background-image: url(""),
           -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
           url("https://cdn-pic.gcxstudio.cn/2021/08/27/LZBJ.jpg");
-        background-image: url("images/overlay.png"),
+        background-image: url(""),
           -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
           url("https://cdn-pic.gcxstudio.cn/2021/08/27/LZBJ.jpg");
-        background-image: url("images/overlay.png"),
+        background-image: url(""),
           -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
           url("https://cdn-pic.gcxstudio.cn/2021/08/27/LZBJ.jpg");
-        background-image: url("images/overlay.png"),
+        background-image: url(""),
           linear-gradient(
             60deg,
             rgba(255, 165, 150, 0.5) 5%,
@@ -157,8 +161,12 @@
         background-repeat: repeat, no-repeat, no-repeat;
         background-size: 100px 100px, cover, cover;
         background-position: top left, center center, bottom center;
-        background-attachment: fixed, fixed, fixed;
+        background-attachment: -webkit-fixed;
+        background-attachment: -moz-fixed;
+        background-attachment: -ms-fixed;
+        background-attachment: fixed;
       }
+
       /* 背景颜色渐变效果 */
       #main {
         height: 500px;
@@ -174,6 +182,7 @@
         text-align: center;
         width: 27em;
       }
+
       /* 网站全部主要内容 */
       #wrapper {
         display: -moz-flex;
@@ -201,6 +210,7 @@
         padding: 1.5em;
         z-index: 2;
       }
+
       /* 容器 */
       #main::before {
         content: "";
@@ -216,29 +226,44 @@
         transform: translate(0, 105px) scale(0.4, 0.4);
         z-index: -1;
       }
+
       /* 容器图片 */
       .highlight {
         margin-top: 1rem;
       }
+
       /* 文字高亮效果 */
       #author_name {
         color: #f35626;
         background: coral;
-        background-image: -webkit-linear-gradient(45deg, #fcdf8a, #f38381);
-        background-clip: text;
+        background-image: linear-gradient(45deg, #fcdf8a, #f38381);
         -webkit-background-clip: text;
+        -ms-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
+        -ms-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
         animation: hue 3s infinite linear;
       }
+
       /* 文字颜色渐变效果 ID 选择器 */
       @keyframes hue {
         from {
           -webkit-filter: hue-rotate(0deg);
+          -ms-filter: hue-rotate(0deg);
+          -moz-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
         }
+
         to {
           -webkit-filter: hue-rotate(-360deg);
+          -ms-filter: hue-rotate(0deg);
+          -moz-filter: hue-rotate(0deg);
+          filter: hue-rotate(-360deg);
         }
       }
+
       /* 文字颜色渐变效果 */
     </style>
     <link
@@ -317,7 +342,7 @@
       <!-- 👆👆在头部放置顶部栏并设置向下滚动时消失 -->
       <div class="mdui-toolbar">
         <a
-          href="/index.html"
+          href="index.html"
           target="_blank"
           class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
           mdui-tooltip="{content: '返回首页'}"
@@ -327,6 +352,7 @@
             src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
             class="mdui-icon mdui-img-fluid mdui-img-rounded"
             style="width: 24px; height: 24px"
+            alt="头像"
           />
         </a>
         <span class="mdui-typo-title-opacity">Gong_cx 恐龙酱</span>
@@ -342,6 +368,7 @@
           <img
             src="https://img.shields.io/github/last-commit/GBCLStudio/introduction-page?color=orange&label=%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%8F%90%E4%BA%A4&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded"
+            alt="Github 仓库最后一次提交时间"
         /></a>
         <!-- 👆👆顶部栏小卡片 -->
         <a
@@ -354,6 +381,7 @@
           <img
             src="https://img.shields.io/github/stars/GBCLStudio/introduction-page?color=orange&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%20Star%20%E6%95%B0%E9%87%8F&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded mdui-hidden-lg-down"
+            alt="Github 仓库 Stars 数"
         /></a>
         <!-- 👆👆顶部栏小卡片 -->
         <a
@@ -394,6 +422,7 @@
           alt=""
           class="rounded mx-auto d-block mdui-img-circle"
           style="width: 122px; height: 122px"
+          alt="头像"
         />
         <!-- 👆👆头像 -->
         <br />
@@ -415,6 +444,7 @@
           <img
             src="https://img.shields.io/uptimerobot/status/m789045589-aa4c724e50481824deb4c00f?color=orange&label=%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded"
+            alt="服务器运行状态"
           />
         </a>
         <!-- 👆👆小卡片 1 -->
@@ -429,6 +459,7 @@
           <img
             src="https://img.shields.io/uptimerobot/ratio/m789046749-eb9a19ebbd61f55f3816baa2?color=orange&label=%E7%BD%91%E7%AB%99%E5%8F%AF%E7%94%A8%E7%8E%87&style=for-the-badge"
             class="mdui-img-fluid mdui-img-rounded"
+            alt="网站可用率"
           />
         </a>
         <!-- 👆👆小卡片 2 -->
@@ -437,6 +468,7 @@
           <img
             class="mdui-chip-icon"
             src="https://pic.gcxstudio.cn/images/2021/07/05/QQ20210705211039.jpg"
+            alt="标签图片"
           />
           <!-- 👆👆标签前图 -->
           <span class="mdui-chip-title">外号：恐龙酱，快来陪我 van ♂</span>
@@ -452,7 +484,9 @@
           </p>
           <!-- 👆👆一言正文 / 引用内容上半部分 -->
           <footer style="text-align: right">
-            <div id="from"><p id="who"></p></div>
+            <div id="from">
+              <p id="who"></p>
+            </div>
           </footer>
           <!-- 👆👆引用内容下半部分 -->
         </blockquote>
@@ -465,11 +499,12 @@
           <span
             ><img
               class="mdui-img-rounded img-fluid"
+              alt="高亮内容图片"
               src="https://shields.io/badge/%E6%8E%A8%E8%8D%90%E5%86%85%E5%AE%B9-%E5%BF%AB%E6%9D%A5%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%BA%B7%E5%BA%B7%EF%BC%8C%E8%BF%99%E9%87%8C%E9%83%BD%E6%98%AF%E5%A5%BD%E5%BA%B7%E7%9A%84%E5%98%BF%E5%98%BF%E5%98%BF-orange?logo=wordpress&style=for-the-badge"
           /></span>
           <a
             mdui-tooltip="{content: '好康的博客，都是好东西嘿嘿'}"
-            href="//www.gcxstudio.cn/"
+            href="https://www.gcxstudio.cn/"
             one-link-mark="yes"
             >https://www.gcxstudio.cn</a
           >
@@ -478,8 +513,9 @@
         <button
           class="mdui-btn mdui-color-blue-accent mdui-ripple"
           onclick="onClickHomo()"
+          mdui-tooltip="{content: '听说按到 11 下惊喜'}"
         >
-          多按我几下
+          切换语句
         </button>
         <!-- 👆👆彩蛋按钮 -->
         <br />
@@ -493,14 +529,16 @@
           <img
             src="https://img.shields.io/badge/%E6%8A%80%E8%83%BD-HTML-orange?style=for-the-badge"
             class="mdui-img-rounded img-fluid"
+            alt="HTML"
           />
           <br />
           <div class="mdui-progress">
             <div class="mdui-progress-determinate" style="width: 50%"></div>
           </div>
           <img
-            src="https://img.shields.io/badge/%E6%8A%80%E8%83%BD-生草之力-orange?style=for-the-badge"
+            src="https://img.shields.io/badge/%E6%8A%80%E8%83%BD-%E7%94%9F%E8%8D%89%E4%B9%8B%E5%8A%9B-orange?style=for-the-badge"
             class="mdui-img-rounded img-fluid"
+            alt="生草之力"
           />
           <div class="mdui-progress">
             <div class="mdui-progress-determinate" style="width: 70%"></div>
@@ -508,6 +546,7 @@
           <img
             src="https://img.shields.io/badge/%E6%8A%80%E8%83%BD-%E7%94%9F%E8%8D%89%E4%B9%8B%E5%8A%9B-orange?style=for-the-badge"
             class="mdui-img-rounded img-fluid"
+            alt="摸鱼之力"
           />
           <div class="mdui-progress">
             <div class="mdui-progress-determinate" style="width: 100%"></div>
@@ -538,6 +577,7 @@
             align="center"
             src="https://github-readme-stats.vercel.app/api?username=Gongcxgithub&show_icons=true&theme=vue&custom_title=Gong_cx%20%E7%9A%84%20Github%20%E7%8A%B6%E6%80%81%E5%9B%BE"
             class="mdui-img-rounded img-fluid"
+            alt="Github 状态卡"
           />
         </div>
         <br />
@@ -585,6 +625,7 @@
             src="https://cdn-pic.gcxstudio.cn/2021/08/27/LIVP.jpg"
             class="mdui-img-rounded mdui-img-fluid"
             style="height: 100%; width: 50%"
+            alt="微信加好友二维码"
           />
         </center>
       </div>
@@ -595,6 +636,7 @@
             src="https://cdn-pic.gcxstudio.cn/2021/08/27/LO8E.png"
             class="mdui-img-rounded mdui-img-fluid"
             style="height: 100%; width: 50%"
+            alt="微信赞助二维码"
           />
         </center>
       </div>
@@ -622,6 +664,7 @@
             src="https://cdn-pic.gcxstudio.cn/2021/08/27/LoQ7.png"
             class="mdui-img-rounded mdui-img-fluid"
             style="height: 100%; width: 50%"
+            alt="QQ加好友二维码"
           />
         </center>
       </div>
@@ -632,6 +675,7 @@
             src="https://cdn-pic.gcxstudio.cn/2021/08/27/Llxu.png"
             class="mdui-img-rounded mdui-img-fluid"
             style="height: 100%; width: 50%"
+            alt="QQ赞助二维码"
           />
         </center>
       </div>
@@ -661,7 +705,12 @@
             src="https://img.shields.io/static/v1?label=%E6%9B%B4%E6%96%B0%E8%B5%84%E8%AE%AF&message=GBCLStudio%27s%20Update%20information&color=blue&style=for-the-badge&labelColor=green&logo=telegram"
             class="img-fluid mdui-img-rounded"
             alt="Telegram 公告频道"
-            style="text-align: -webkit-center"
+            style="
+              text-align: -webkit-center;
+              text-align: -ms-center;
+              text-align: -moz-center;
+              text-align: center;
+            "
           />
         </a>
       </div>
@@ -670,16 +719,30 @@
       </div>
     </div>
     <!-- 👆👆TG联系方式 -->
-    <footer style="text-align: center" class="mdui-typo">
-      <div class="container">
-        <div>
-          2020-2021 © Gong_cx . All rights reserved | 备案号:
-          <a
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-            one-link-mark="yes"
-            >赣ICP备2021005460号-1</a
-          >
+    <footer style="text-align: center">
+      <div class="mdui-container">
+        <img
+            src="https://img.shields.io/static/v1?label=%E5%A4%87%E6%A1%88%E5%8F%B7&message=%E8%B5%A3ICP%E5%A4%872021005460%E5%8F%B7-1&color=orange&style=flat"
+            class="img-fluid mdui-img-rounded"
+            alt="备案号"
+            style="
+              text-align: -webkit-center;
+              text-align: -ms-center;
+              text-align: -moz-center;
+              text-align: center;
+            "
+          /> | 
+            <img
+            src="https://img.shields.io/static/v1?label=Copyright&message=2020-2021%20%C2%A9%20Gong_cx%20.%20All%20rights%20reserved&color=orange&style=flat"
+            class="img-fluid mdui-img-rounded"
+            alt="版权"
+            style="
+              text-align: -webkit-center;
+              text-align: -ms-center;
+              text-align: -moz-center;
+              text-align: center;
+            "
+          />
         </div>
       </div>
     </footer>
