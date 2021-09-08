@@ -3,7 +3,7 @@
 <!--
 ╔═════════════════════════════════════════════════════════════════════════════════════════════════════
 ║title: Gong_cx's Introduction Page
-║网站 v1.0.4 版本
+║网站 v1.0.5 版本
 ║网站由 Gong_cx 制作
 ║版权归属：Gong_cx
 ║代码格式化工具：Prettier（推荐）
@@ -65,27 +65,43 @@
       href="//cdn-pic.gcxstudio.cn"
       crossorigin="anonymous"
     />
+    <!--👆👆外部图床（CDN）-->
     <link
       rel="dns-prefetch"
       href="//v1.hitokoto.cn"
       crossorigin="use-credentials"
     />
+    <!--👆👆一言API-->
     <link
       rel="dns-prefetch"
       href="//pic.gcxstudio.cn"
       crossorigin="anonymous"
     />
+    <!--👆👆外部图床-->
     <link
       rel="dns-prefetch"
       href="//cdn.jsdelivr.net"
       crossorigin="anonymous"
     />
+    <!--👆👆静态资源库-->
     <link rel="dns-prefetch" href="//img.shields.io" crossorigin="anonymous" />
+    <!--👆👆小卡片-->
+    <link rel="dns-prefetch" href="//shields.io" crossorigin="anonymous" />
+    <!--👆👆小卡片-->
+    <link rel="dns-prefetch" href="//y.gtimg.cn" crossorigin="anonymous" />
+    <!--👆👆QQ音乐封面-->
     <link
       rel="dns-prefetch"
       href="//github-readme-stats.vercel.app"
       crossorigin="anonymous"
     />
+    <!--👆👆Github 状态卡-->
+    <link
+      rel="dns-prefetch"
+      href="//live2d.fghrsh.net"
+      crossorigin="anonymous"
+    />
+    <!--👆👆Live2D-->
     <!--👆👆DNS强制预加载本页面所有外部资源-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -281,6 +297,7 @@
     />
     <!-- 👆👆图标包 -->
     <script>
+      "use strict";
       setInterval("hitokoto()", 6000); // 设置循环一言函数，6000毫秒一次
       function hitokoto() {
         // 定义一言代码段为函数
@@ -301,14 +318,18 @@
     </script>
     <!-- 👆👆一言 -->
     <script>
+      "use strict";
       // 定义变量 HomoValue
       var HomoValue = 0;
       function onClickHomo() {
         HomoValue += 1; // 当被点击，变量值加一
         if (HomoValue < 5) {
+          // 对 HomoValue 变量进行判断，小于 5 时激活 Hitokoto 函数
           hitokoto();
         }
         if (HomoValue == 11) {
+          // 对 HomoValue 变量进行判断，等于 11 时开启彩蛋.
+          document.title = "欢迎来到奇妙世界";
           mdui.snackbar({
             message: "你已经点了这个按钮 11.4514 次了，我要开始哼哼了",
             buttonText: "哼哼",
@@ -325,6 +346,7 @@
         }
         // 判断变量值并作出反馈
         if (HomoValue > 20) {
+          // 对 HomoValue 变量进行判断，大于 20 时开启提示
           mdui.snackbar({
             message: "别再点了哼，彩蛋你都知道了",
             position: "right-top",
