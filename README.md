@@ -3,8 +3,6 @@
 
 本仓库为个人介绍页面模板，主要通过 MDUI 和 Bootstrap 实现
 
-在 v1.0.2 版本，作者加入了一个彩蛋，当一个按钮按下次数达 11 次时触发提示框，彩蛋代码可移除
-
 欢迎加入我们的新 Telegram 频道，本频道用于发布 GBCLStudio 的最新消息:
 
 [![Telegram  群组](https://img.shields.io/static/v1?label=%E6%9B%B4%E6%96%B0%E8%B5%84%E8%AE%AF&message=GBCLStudio%27s%20Update%20information&color=blue&style=for-the-badge&labelColor=green&logo=telegram)](https://t.me/gbclstudio_news)
@@ -25,7 +23,7 @@ Support my development on [爱发电](https://afdian.net/@GBCLStudio)!
 
 ### 其他：
 
-   [![运行状态](https://img.shields.io/website?down_color=red&labelColor=blue&down_message=Offline%20%7C%20%E4%B8%8B%E7%BA%BF&label=DEMO%20%E6%BC%94%E7%A4%BA%E9%A1%B5%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81&style=for-the-badge&up_color=green&up_message=Online%20%7C%20%E5%9C%A8%E7%BA%BF&url=https%3A%2F%2Fgcxstudio.cn)](https://gcxstudio.cn)   [![License](https://img.shields.io/github/license/GBCLStudio/introduction-page?color=orange&labelColor=blue&label=%E6%88%91%E4%BB%AC%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8&logo=GNU&style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0.html)
+   [![运行状态](https://img.shields.io/website?down_color=red&labelColor=blue&down_message=Offline%20%7C%20%E4%B8%8B%E7%BA%BF&label=DEMO%20%E6%BC%94%E7%A4%BA%E9%A1%B5%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81&style=for-the-badge&up_color=green&up_message=Online%20%7C%20%E5%9C%A8%E7%BA%BF&url=https://mc.gbclstudio.cn)](https://mc.gbclstudio.cn)   [![License](https://img.shields.io/github/license/GBCLStudio/introduction-page?color=orange&labelColor=blue&label=%E6%88%91%E4%BB%AC%E6%AD%A3%E5%9C%A8%E4%BD%BF%E7%94%A8&logo=GNU&style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ### 联系作者:
 
