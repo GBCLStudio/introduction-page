@@ -362,6 +362,46 @@
     <!-- 👆👆在网站加载完后第一次运行一言函数 -->
     <header class="mdui-appbar mdui-appbar-fixed" mdui-headroom>
       <!-- 👆👆在头部放置顶部栏并设置向下滚动时消失 -->
+       <!-- script>     
+//判断是否是ie且给出ie版本号()
+    function IEVersion() {
+      var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+      var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+      var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+      if(isIE) {
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        if(fIEVersion == 7) {
+          return 7;
+        } else if(fIEVersion == 8) {
+          return 8;
+        } else if(fIEVersion == 9) {
+          return 9;
+        } else if(fIEVersion == 10) {
+          return 10;
+        } else if(fIEVersion == 11) {
+          return 11;
+        } else {
+          return 6;//IE版本<=7
+        }
+      } else if(isEdge) {
+        return 'edge';//edge
+      } else if(isIE11) {
+        return 11; //IE11
+      }else{
+        return -1;//不是ie浏览器
+      }
+    }
+    
+    
+var isIE = IEVersion();
+// alert(isIE)
+if (isIE == "6" || isIE == "7" || isIE == "8" || isIE == "9" || isIE == "10"){
+    window.location = "/updatebrowser.html";
+}
+    </script -->
       <div class="mdui-toolbar">
         <a
           href="index.html"
